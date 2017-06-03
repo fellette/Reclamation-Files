@@ -1,0 +1,70 @@
+#Gauge Salt Concentration
+ColoradoBelowHoover.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+ColoradoBelowParker.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+ColoradoAtImperialDam.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+ColoradoNearGlenwoodSprings.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+ColoradoNearCameo.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+GunnisonNearGrandJunction.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+DoloresNearCisco.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+ColoradoNearCisco.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+GreenAtGreenRiverWY.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+GreenNearGreendale.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+YampaNearMaybell.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+DuchesneNearRandlett.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+WhiteNearWatson.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+GreenAtGreenRiverUT.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+SanRafaelNearGreenRiverUT.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+SanJuanNearArchuleta.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+SanJuanNearBluff.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+ColoradoAtLeesFerry.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+ColoradoNearGrandCanyon.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+VirginAtLittlefield.Salt Concentration: file=$CRSS_DIR/results/SaltOutput.rdf
+
+#Upper Basin Salt Mass Balance
+UB Salt Mass Balance.UpperBasinSaltMass: file=$CRSS_DIR/results/SaltOutput.rdf file=$CRSS_DIR/results/SaltMassBalance.rdf
+UB Salt Mass Balance.UpperBasinSaltMass_Upper Basin Grn Balance: file=$CRSS_DIR/results/SaltOutput.rdf
+UB Salt Mass Balance.UpperBasinSaltMass_Upper Basin Upp Colo Balance: file=$CRSS_DIR/results/SaltOutput.rdf
+UB Salt Mass Balance.UpperBasinSaltMass_Upper Basin San Jn Balance: file=$CRSS_DIR/results/SaltOutput.rdf
+UB Salt Mass Balance.UpperBasinSaltMass_Subbasin Balance Abv Powell: file=$CRSS_DIR/results/SaltOutput.rdf
+UB Salt Mass Balance.UpperBasinSaltMass_Upper Basin San Jn Balance Test: file=$CRSS_DIR/results/SaltOutput.rdf
+UB Salt Mass Balance.UpperBasinSaltMass_Upper Basin Balance.Natural Inflow: file=$CRSS_DIR/results/SaltMassBalance.rdf
+UB Salt Mass Balance.UpperBasinSaltMass_Upper Basin Balance.Agricultural Inflow: file=$CRSS_DIR/results/SaltMassBalance.rdf
+UB Salt Mass Balance.UpperBasinSaltMass_Upper Basin Balance.Exports: file=$CRSS_DIR/results/SaltMassBalance.rdf
+UB Salt Mass Balance.UpperBasinSaltMass_Upper Basin Balance.WQIPS: file=$CRSS_DIR/results/SaltMassBalance.rdf
+UB Salt Mass Balance.ReservoirSaltMass: file=$CRSS_DIR/results/SaltMassBalance.rdf
+UB Salt Mass Balance.ChangeInReachSaltMass: file=$CRSS_DIR/results/SaltMassBalance.rdf
+UB Salt Mass Balance.UpperBasinSaltMass_Upper Basin Balance.OutflowSaltMass: file=$CRSS_DIR/results/SaltMassBalance.rdf
+
+#Lower Basin Salt Mass Balance
+LB Salt Mass Balance.LowerBasinSaltMass_Lower Basin Balance: file=$CRSS_DIR/results/SaltOutput.rdf file=$CRSS_DIR/results/SaltMassBalance.rdf
+LB Salt Mass Balance.LowerBasinSaltMass_Lower Basin Balance.Natural Inflow: file=$CRSS_DIR/results/SaltMassBalance.rdf
+LB Salt Mass Balance.LowerBasinSaltMass_Lower Basin Balance.Agricultural Inflow: file=$CRSS_DIR/results/SaltMassBalance.rdf
+LB Salt Mass Balance.LowerBasinSaltMass_Lower Basin Balance.Exports: file=$CRSS_DIR/results/SaltMassBalance.rdf
+LB Salt Mass Balance.LowerBasinSaltMass_Lower Basin Balance.WQIPS: file=$CRSS_DIR/results/SaltMassBalance.rdf
+LB Salt Mass Balance.LowerBasinSaltMass_Lower Basin Balance.OutflowSaltMass: file=$CRSS_DIR/results/SaltMassBalance.rdf
+LB Salt Mass Balance.ChangeInReachSaltMass: file=$CRSS_DIR/results/SaltMassBalance.rdf
+LB Salt Mass Balance.ReservoirSaltMass: file=$CRSS_DIR/results/SaltMassBalance.rdf
+
+#Annual Salinity
+AnnualSalinity.SeriesSlot: file=$CRSS_DIR/results/WQAnn.rdf
+
+#Salt Storage
+AboveImperialDamColoradoR:RRNativeVegetation.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+VirginRiver:RRVegMgmt.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+CoRivLittleCOToVirgin:GainsAboveGC.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+LowerSanJuanRiver:UtahUses.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+DoloresRiver:ParadoxValleyWQIP.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+GunnisonRiverAboveGrandJunction:DallasCreekProject_MiscUses.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+UpperColoradoReach:ExportsAboveGlenwoodSprings.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+UpperColoradoAboveCameo:MiscUsersAbvCameo.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+SanRafaelRiver:RRPriceSanRafael_SanRafaelWQIP.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+GreenRWhiteToSanRafael:GreenRiverUTWQIP.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+WhiteRiverAboveWatson:RRWhiteUTAgandMIUse.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+DuchesneBelowStarv:RRMiscUsesAboveRandlette.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+YampaRiver:RRHaydenAndCraigThermalAndMisc.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+GreenRAboveGreenRiverWY:RRMiscUsesBelowFontenelle.Salt Storage: file=$CRSS_DIR/results/SaltOutput.rdf
+
+#WQIP Check
+GreenRiverUTWQIP.Salt Mass Removal Request: file=$CRSS_DIR/results/SaltOutput.rdf
+Mead.Pool Elevation: file=$CRSS_DIR/results/KeySlots.rdf 
+Powell.Pool Elevation: file=$CRSS_DIR/results/KeySlots.rdf 

@@ -1,0 +1,3260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CADSWES, University of Colorado, http://cadswes.colorado.edu/
+RiverSMART 1.5.3
+Document created on Thu Apr 20 12:20:36 2017
+Document created by CJerla
+-->
+<Study>
+<version patch="3" major="1" minor="5"><type>RiverSMART</type>
+</version>
+<pluginList><plugin patch="0" major="1" minor="0"><type>CSV Combiner</type>
+</plugin>
+<plugin patch="0" major="1" minor="1"><type>GPAT Graphs</type>
+</plugin>
+<plugin patch="0" major="1" minor="1"><type>Hydrology Simulator</type>
+</plugin>
+<plugin patch="0" major="1" minor="1"><type>R Plugin</type>
+</plugin>
+<plugin patch="0" major="1" minor="0"><type>RDF Annualizer</type>
+</plugin>
+<plugin patch="0" major="1" minor="0"><type>RDF To Excel</type>
+</plugin>
+<plugin patch="0" major="1" minor="1"><type>RiverWare</type>
+</plugin>
+<plugin patch="0" major="1" minor="1"><type>RiverWare DMI</type>
+</plugin>
+<plugin patch="0" major="1" minor="1"><type>RiverWare MRM</type>
+</plugin>
+<plugin patch="0" major="1" minor="1"><type>RiverWare Model</type>
+</plugin>
+<plugin patch="0" major="1" minor="0"><type>RiverWare Policy</type>
+</plugin>
+<plugin patch="0" major="1" minor="0"><type>RiverWare Run Range</type>
+</plugin>
+<plugin patch="0" major="1" minor="1"><type>Spatial Disagg</type>
+</plugin>
+<plugin patch="0" major="1" minor="1"><type>Temporal Disagg</type>
+</plugin>
+</pluginList>
+<fileInfo><createdOn>Thu Apr 20 12:20:36 2017</createdOn>
+<createdBy>CJerla</createdBy>
+</fileInfo>
+<name>CRSS Quarterly Studies</name>
+<studyDirPath>$CRSS_DIR</studyDirPath>
+<diagEnabled>1</diagEnabled>
+<scene><fontSize>10</fontSize>
+<fontColor>#ff00ff</fontColor>
+</scene>
+<graph textCnt="12" fileCnt="14" eventCnt="56" numNode="82"><textNode nodeNum="0"><scenePos x="2369" y="2165"></scenePos>
+<text>Model</text>
+<fontSize>16</fontSize>
+<fontColor>#0000ff</fontColor>
+</textNode>
+<fileNode type="RDF" nodeNum="1"><scenePos x="2827" y="2862"></scenePos>
+<fileConfig><uuid>{e44a513a-35a1-4dba-94a6-023c45266532}</uuid>
+<name>Flags.rdf</name>
+<fileName>Flags.rdf</fileName>
+</fileConfig>
+</fileNode>
+<eventNode type="RDF To Excel" nodeNum="2"><scenePos x="2945" y="2859"></scenePos>
+<eventConfig><uuid>{bf3d373b-7514-47d3-b4fb-9061da357b92}</uuid>
+<name>Flags RDF To Excel 001</name>
+<placeholder>0</placeholder>
+<scope>scenario</scope>
+<config><orient>t,r,s</orient>
+<slotname>short</slotname>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="3"><scenePos x="2491.5" y="3115.5"></scenePos>
+<eventConfig><uuid>{e4e8c98c-6135-4cbc-92ba-d065740a73e1}</uuid>
+<name>1991</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace14" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace14" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="4"><scenePos x="2681.5" y="2912.5"></scenePos>
+<eventConfig><uuid>{dc072eb9-61a6-4d38-9ee6-930dc86ff821}</uuid>
+<name>MTOM_Max</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace2" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace2" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="5"><scenePos x="2553.5" y="2911.5"></scenePos>
+<eventConfig><uuid>{89335aad-5114-481f-9ec3-ad7d0a59effc}</uuid>
+<name>MTOM_Min</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace1" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace1" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="6"><scenePos x="2276.5" y="2911.5"></scenePos>
+<eventConfig><uuid>{fff9df47-1e55-48f0-b793-da24a699612e}</uuid>
+<name>Max</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Max" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Max" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="7"><scenePos x="2618.5" y="3334.5"></scenePos>
+<eventConfig><uuid>{55bf3c2b-6213-4018-a952-a8cae088500f}</uuid>
+<name>2008</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace31" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace31" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="8"><scenePos x="2548.5" y="3045.5"></scenePos>
+<eventConfig><uuid>{f6b6af53-92b9-4fd4-9ad2-a9e7152d48d2}</uuid>
+<name>1987</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace10" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace10" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="9"><scenePos x="2490.5" y="2978.5"></scenePos>
+<eventConfig><uuid>{ee614daa-8263-455f-8fef-a817f7732c2c}</uuid>
+<name>1981</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace4" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace4" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="10"><scenePos x="2675.5" y="3048.5"></scenePos>
+<eventConfig><uuid>{048542b9-72f2-41a2-a74b-1adcf55ebf0b}</uuid>
+<name>1989</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace12" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace12" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<fileNode type="Excel Workbook" nodeNum="11"><scenePos x="3063" y="2860"></scenePos>
+<fileConfig><uuid>{06e9bc8f-1759-40f9-b6bf-47452c430656}</uuid>
+<name>Flags.xlsx</name>
+<fileName>Flags.xlsx</fileName>
+</fileConfig>
+</fileNode>
+<eventNode type="RiverWare DMI" nodeNum="12"><scenePos x="2614.5" y="2979.5"></scenePos>
+<eventConfig><uuid>{e26ed6ba-2b94-46b4-a07a-35dc58b8b236}</uuid>
+<name>1983</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace6" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace6" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="13"><scenePos x="2741.5" y="2978.5"></scenePos>
+<eventConfig><uuid>{40b78670-f138-4a8e-8426-16bc499477f1}</uuid>
+<name>1985</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace8" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace8" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="14"><scenePos x="2549.5" y="2978.5"></scenePos>
+<eventConfig><uuid>{56995749-4c52-4b7f-aac0-9e5a010b57ec}</uuid>
+<name>1982</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace5" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace5" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="15"><scenePos x="2492.5" y="3044.5"></scenePos>
+<eventConfig><uuid>{0f3b385b-7354-47f0-9489-7469f3f9007b}</uuid>
+<name>1986</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace9" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace9" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="16"><scenePos x="2617.5" y="2912.5"></scenePos>
+<eventConfig><uuid>{44ecc40f-e2db-4acc-9835-8da40cd5f4e6}</uuid>
+<name>MTOM_Most</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace3" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace3" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="17"><scenePos x="2551.5" y="3265.5"></scenePos>
+<eventConfig><uuid>{29e123c7-3e8a-4499-ae1f-3d49ff0b59bb}</uuid>
+<name>2002</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace25" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace25" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="18"><scenePos x="2740.5" y="3049.5"></scenePos>
+<eventConfig><uuid>{6deffa8f-f236-4ee8-9cae-15725f6be70a}</uuid>
+<name>1990</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace13" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace13" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="19"><scenePos x="2493.5" y="3189.5"></scenePos>
+<eventConfig><uuid>{ed984ea7-dbfe-4505-aefe-48c3e9017a73}</uuid>
+<name>1996</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace19" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace19" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="20"><scenePos x="2494.5" y="3335.5"></scenePos>
+<eventConfig><uuid>{1a8f21d6-2760-4405-9ac1-2e91dde56e04}</uuid>
+<name>2006</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace29" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace29" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="21"><scenePos x="2613.5" y="3047.5"></scenePos>
+<eventConfig><uuid>{bfdf0321-f3ad-4a11-b556-17226189a613}</uuid>
+<name>1988</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace11" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace11" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="22"><scenePos x="2613.5" y="3192.5"></scenePos>
+<eventConfig><uuid>{880a8688-dc63-4251-8a61-8eff62ea9cf7}</uuid>
+<name>1998</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace21" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace21" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="23"><scenePos x="2742.5" y="3121.5"></scenePos>
+<eventConfig><uuid>{249f94cf-5bac-4f81-b2f1-6b68d5f9fb87}</uuid>
+<name>1995</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace18" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace18" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="24"><scenePos x="2550.5" y="3189.5"></scenePos>
+<eventConfig><uuid>{76e5ac39-005e-4a63-ad3a-dd1c1605b8b6}</uuid>
+<name>1997</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace20" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace20" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="25"><scenePos x="2675.5" y="3119.5"></scenePos>
+<eventConfig><uuid>{f6f70f9c-e440-4d51-85f0-807bab0abc80}</uuid>
+<name>1994</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace17" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace17" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="26"><scenePos x="2676.5" y="3193.5"></scenePos>
+<eventConfig><uuid>{a08ef79e-13f8-4ef7-bb16-29374019d4b9}</uuid>
+<name>1999</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace22" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace22" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="27"><scenePos x="2549.5" y="3117.5"></scenePos>
+<eventConfig><uuid>{2424290c-e40b-432c-b03c-2ff3f1eb9c55}</uuid>
+<name>1992</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace15" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace15" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="28"><scenePos x="2742.5" y="3335.5"></scenePos>
+<eventConfig><uuid>{c3a41621-a45e-4892-aee8-f7f90520bba5}</uuid>
+<name>2010</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace33" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace33" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="29"><scenePos x="2742.5" y="3193.5"></scenePos>
+<eventConfig><uuid>{02471d8d-be79-4ec2-8494-0dd26605b64b}</uuid>
+<name>2000</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace23" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace23" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="30"><scenePos x="2677.5" y="3263.5"></scenePos>
+<eventConfig><uuid>{90d4b99d-eb27-4583-b01f-8ae45eddfff0}</uuid>
+<name>2004</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace27" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace27" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="31"><scenePos x="2612.5" y="3118.5"></scenePos>
+<eventConfig><uuid>{6aad162d-9ca7-45fb-ab07-b8cb353723f6}</uuid>
+<name>1993</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace16" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace16" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="32"><scenePos x="2679.5" y="2979.5"></scenePos>
+<eventConfig><uuid>{15a021b9-7214-4d50-8d36-80c12239569a}</uuid>
+<name>1984</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace7" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace7" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="33"><scenePos x="2554.5" y="3335.5"></scenePos>
+<eventConfig><uuid>{8495de2e-682a-4e03-b60a-15d5ee4ba635}</uuid>
+<name>2007</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace30" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace30" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="34"><scenePos x="2617.5" y="3265.5"></scenePos>
+<eventConfig><uuid>{01654516-0c75-4f0a-a024-43efc74908ec}</uuid>
+<name>2003</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace26" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace26" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="35"><scenePos x="2492.5" y="3263.5"></scenePos>
+<eventConfig><uuid>{636a0aad-6b27-460b-8162-1a87c8a47fd2}</uuid>
+<name>2001</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace24" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace24" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="36"><scenePos x="2742.5" y="3263.5"></scenePos>
+<eventConfig><uuid>{6726301f-61e8-4462-a744-17679a5ff92a}</uuid>
+<name>2005</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace28" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace28" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="37"><scenePos x="2680.5" y="3336.5"></scenePos>
+<eventConfig><uuid>{ad0442c7-0204-4f9e-bab4-aa526c9f49aa}</uuid>
+<name>2009</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace32" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace32" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="38"><scenePos x="2395.5" y="2911.5"></scenePos>
+<eventConfig><uuid>{89d45ee6-64b1-4512-bd77-7663bc83f13c}</uuid>
+<name>Min</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Min" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Min" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare Model" nodeNum="39"><scenePos x="2385.5" y="2208.5"></scenePos>
+<eventConfig><uuid>{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}</uuid>
+<name>Apr2017_2018</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<ModelParams>
+<ModelFile>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</ModelFile>
+</ModelParams>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="40"><scenePos x="2334.5" y="2911.5"></scenePos>
+<eventConfig><uuid>{31f2dc6a-df14-4805-be26-8ef7bf0b0c7e}</uuid>
+<name>Most</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Most" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Most" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<fileNode type="RDF" nodeNum="41"><scenePos x="2829" y="2403"></scenePos>
+<fileConfig><uuid>{1cc6fa7c-fe1a-444f-a0cf-9afb146975d5}</uuid>
+<name>OWDAnn.rdf</name>
+<fileName>OWDAnn.rdf</fileName>
+</fileConfig>
+</fileNode>
+<fileNode type="RDF" nodeNum="42"><scenePos x="2828" y="2331"></scenePos>
+<fileConfig><uuid>{1b7a74a1-3e7e-4660-919a-128d47b0c104}</uuid>
+<name>KeySlots.rdf</name>
+<fileName>KeySlots.rdf</fileName>
+</fileConfig>
+</fileNode>
+<eventNode type="RiverWare DMI" nodeNum="43"><scenePos x="2182.5" y="2231.5"></scenePos>
+<eventConfig><uuid>{59f2e25b-1215-4b9d-950f-9bc428a7c333}</uuid>
+<name>2007Dems</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>2007 UB and LB Demands</Name>
+<UserCategory>Demand</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Baseline Monthly Data" name="2007 UCRC Demand Schedule"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare MRM" nodeNum="44"><scenePos x="2127.5" y="2592.5"></scenePos>
+<eventConfig><uuid>{91c605b1-8dbb-42ae-9c81-e3460f2c7555}</uuid>
+<name>VIC_A</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><mrmConfigName>VIC Demand Scenario A</mrmConfigName>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare MRM" nodeNum="45"><scenePos x="2206" y="2522"></scenePos>
+<eventConfig><uuid>{7f7fd6c1-f640-4208-80be-56ddcd218985}</uuid>
+<name>DNF</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><mrmConfigName>DNF with Salinity</mrmConfigName>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare" nodeNum="46"><scenePos x="2483" y="2421"></scenePos>
+<eventConfig><uuid>{73d90dfe-bfa1-47b1-a84c-18220f651c66}</uuid>
+<name>CRSS</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><rwExec>C:/Program Files/CADSWES/RiverWare 7.0.1/riverware.exe</rwExec>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare Policy" nodeNum="47"><scenePos x="2497" y="2159"></scenePos>
+<eventConfig><uuid>{cea02930-19f8-4040-bb24-bada62153f93}</uuid>
+<name>IG</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat><RplPolicy><RplSetFile>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</RplSetFile>
+</RplPolicy>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare Policy" nodeNum="48"><scenePos x="2546" y="2222"></scenePos>
+<eventConfig><uuid>{e614ed58-ea19-4e47-9a3b-5281156e5272}</uuid>
+<name>NA</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat><RplPolicy><RplSetFile>$CRSS_DIR\ruleset\CRSS.Baseline.2027NA.v2.4.rls</RplSetFile>
+</RplPolicy>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare MRM" nodeNum="49"><scenePos x="2205.5" y="2592.5"></scenePos>
+<eventConfig><uuid>{11414eea-6d17-4f1f-9fe1-48dfc7bc3d24}</uuid>
+<name>VIC</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><mrmConfigName>VIC with 2007 Demands</mrmConfigName>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RDF To Excel" nodeNum="50"><scenePos x="2953.5" y="2494.5"></scenePos>
+<eventConfig><uuid>{aa6d1df6-c290-4eda-ac69-0892f17c9732}</uuid>
+<name>Res RDF To Excel</name>
+<placeholder>0</placeholder>
+<scope>scenario</scope>
+<config><orient>t,r,s</orient>
+<slotname>short</slotname>
+</config>
+</eventConfig>
+</eventNode>
+<fileNode type="Excel Workbook" nodeNum="51"><scenePos x="3064.5" y="2677.5"></scenePos>
+<fileConfig><uuid>{bfe6f175-2af0-4490-a803-720f1c66598f}</uuid>
+<name>xtraRes.xlsx</name>
+<fileName>xtraRes.xlsx</fileName>
+</fileConfig>
+</fileNode>
+<eventNode type="RDF To Excel" nodeNum="52"><scenePos x="2951.5" y="2585.5"></scenePos>
+<eventConfig><uuid>{80583ea8-c5ae-4d6f-a09a-693ebba03cb6}</uuid>
+<name>SystemConditions RDF To Excel</name>
+<placeholder>0</placeholder>
+<scope>scenario</scope>
+<config><orient>t,r,s</orient>
+<slotname>short</slotname>
+</config>
+</eventConfig>
+</eventNode>
+<fileNode type="RDF" nodeNum="53"><scenePos x="2828" y="2495"></scenePos>
+<fileConfig><uuid>{1fe0f25e-9239-4b27-8407-634e5f2cca0d}</uuid>
+<name>Res.rdf</name>
+<fileName>Res.rdf</fileName>
+</fileConfig>
+</fileNode>
+<fileNode type="RDF" nodeNum="54"><scenePos x="2826" y="2676"></scenePos>
+<fileConfig><uuid>{1cdb2242-e602-406c-9b3f-0ee9344a8686}</uuid>
+<name>xtraRes.rdf</name>
+<fileName>xtraRes.rdf</fileName>
+</fileConfig>
+</fileNode>
+<fileNode type="RDF" nodeNum="55"><scenePos x="2828" y="2585"></scenePos>
+<fileConfig><uuid>{1bb088e8-0b09-4808-b6f8-cacef2df4710}</uuid>
+<name>SystemConditions.rdf</name>
+<fileName>SystemConditions.rdf</fileName>
+</fileConfig>
+</fileNode>
+<fileNode type="RDF" nodeNum="56"><scenePos x="2825" y="2769"></scenePos>
+<fileConfig><uuid>{05708091-2999-40a1-8922-6fb4f0a54117}</uuid>
+<name>CRSPPowerData.rdf</name>
+<fileName>CRSPPowerData.rdf</fileName>
+</fileConfig>
+</fileNode>
+<fileNode type="Excel Workbook" nodeNum="57"><scenePos x="3065.5" y="2586.5"></scenePos>
+<fileConfig><uuid>{83de84bf-99e4-4ce0-80e2-fb78d7ff8087}</uuid>
+<name>SystemConditions.xlsx</name>
+<fileName>SystemConditions.xlsx</fileName>
+</fileConfig>
+</fileNode>
+<eventNode type="RDF To Excel" nodeNum="58"><scenePos x="2951.5" y="2676.5"></scenePos>
+<eventConfig><uuid>{dfb9df1a-6dea-4539-92ba-211d9959fb66}</uuid>
+<name>xtraRes RDF To Excel</name>
+<placeholder>0</placeholder>
+<scope>scenario</scope>
+<config><orient>t,r,s</orient>
+<slotname>short</slotname>
+</config>
+</eventConfig>
+</eventNode>
+<fileNode type="Excel Workbook" nodeNum="59"><scenePos x="3068.5" y="2493.5"></scenePos>
+<fileConfig><uuid>{b3d8d13c-556f-4080-9329-116f95a8f977}</uuid>
+<name>Res.xlsx</name>
+<fileName>Res.xlsx</fileName>
+</fileConfig>
+</fileNode>
+<eventNode type="RDF To Excel" nodeNum="60"><scenePos x="2956" y="2403"></scenePos>
+<eventConfig><uuid>{97ef6f43-393a-4e11-8187-ee3eb6f7d374}</uuid>
+<name>OWDAnn RDF To Excel</name>
+<placeholder>0</placeholder>
+<scope>scenario</scope>
+<config><orient>t,r,s</orient>
+<slotname>short</slotname>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RDF To Excel" nodeNum="61"><scenePos x="2958" y="2318"></scenePos>
+<eventConfig><uuid>{30bbdb67-6757-43d7-ac24-b02a8eeb5ebe}</uuid>
+<name>KeySlots RDF To Excel</name>
+<placeholder>0</placeholder>
+<scope>scenario</scope>
+<config><orient>t,r,s</orient>
+<slotname>short</slotname>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RDF To Excel" nodeNum="62"><scenePos x="2951.5" y="2768.5"></scenePos>
+<eventConfig><uuid>{b676e76c-9e8b-4ce3-add8-70cd4742873e}</uuid>
+<name>CRSPPowerData RDF To Excel</name>
+<placeholder>0</placeholder>
+<scope>scenario</scope>
+<config><orient>t,r,s</orient>
+<slotname>short</slotname>
+</config>
+</eventConfig>
+</eventNode>
+<fileNode type="Excel Workbook" nodeNum="63"><scenePos x="3075" y="2318"></scenePos>
+<fileConfig><uuid>{889696d7-606c-4768-ade1-52a72357e49c}</uuid>
+<name>KeySlots.xlsx</name>
+<fileName>KeySlots.xlsx</fileName>
+</fileConfig>
+</fileNode>
+<fileNode type="Excel Workbook" nodeNum="64"><scenePos x="3070" y="2402"></scenePos>
+<fileConfig><uuid>{bb65d5ba-a6aa-4562-831b-7ef1dafa547f}</uuid>
+<name>OWDAnn.xlsx</name>
+<fileName>OWDAnn.xlsx</fileName>
+</fileConfig>
+</fileNode>
+<eventNode type="RiverWare DMI" nodeNum="65"><scenePos x="2495.5" y="3404.5"></scenePos>
+<eventConfig><uuid>{4e874a1c-07b4-45c6-aa59-9521e6358fb9}</uuid>
+<name>2011</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace34" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace34" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<fileNode type="Excel Workbook" nodeNum="66"><scenePos x="3069.5" y="2768.5"></scenePos>
+<fileConfig><uuid>{94abad30-8085-430b-a0c3-fe278a2c1a27}</uuid>
+<name>CRSPPowerData.xlsx</name>
+<fileName>CRSPPowerData.xlsx</fileName>
+</fileConfig>
+</fileNode>
+<eventNode type="RiverWare DMI" nodeNum="67"><scenePos x="2619.5" y="3405.5"></scenePos>
+<eventConfig><uuid>{2a682a81-f6a0-4ba2-85ad-7d5ee49c5f63}</uuid>
+<name>2013</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace36" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace36" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="68"><scenePos x="2743.5" y="3407.5"></scenePos>
+<eventConfig><uuid>{313646d1-9c0b-4f16-b235-2cc9c4c5242b}</uuid>
+<name>2015</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace38" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace38" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="69"><scenePos x="2554.5" y="3405.5"></scenePos>
+<eventConfig><uuid>{0b8553bf-377f-4230-ad94-4ea116356b34}</uuid>
+<name>2012</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace35" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace35" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<eventNode type="RiverWare DMI" nodeNum="70"><scenePos x="2682.5" y="3405.5"></scenePos>
+<eventConfig><uuid>{01aad661-48b9-4a79-9e7e-fd5a938820a2}</uuid>
+<name>2014</name>
+<placeholder>0</placeholder>
+<scope>event</scope>
+<config><ParamDat>
+<DmiConfig type="DirectConnect">
+<Name>Import Initial Conditions From MTOM</Name>
+<UserCategory>IC</UserCategory>
+<ExecTime>Init</ExecTime>
+<TraceCount>0</TraceCount>
+<ExcelDataSet sheet="Trace37" name="MTOM2CRSS_Annual"/>
+<ExcelDataSet sheet="Trace37" name="MTOM2CRSS_Monthly"/>
+<Executable path="">
+<Arg></Arg>
+</Executable>
+<TracesDmi TracesDir="" TemplateCtlFile=""/>
+</DmiConfig>
+</ParamDat>
+</config>
+</eventConfig>
+</eventNode>
+<textNode nodeNum="71"><scenePos x="2815" y="3049"></scenePos>
+<text>MTOM_[Min/Most/Max] represent the
+min/most/max probable inflow scenarios
+run through MTOM, while [Max/Most/Min]
+are the 24-Month Study min/most/max 
+probable runs.</text>
+<fontSize>10</fontSize>
+<fontColor>#ff00ff</fontColor>
+</textNode>
+<textNode nodeNum="72"><scenePos x="2717" y="2888"></scenePos>
+<text>From MTOM</text>
+<fontSize>10</fontSize>
+<fontColor>#008000</fontColor>
+</textNode>
+<textNode nodeNum="73"><scenePos x="2379" y="2822"></scenePos>
+<text>Initial Conditions</text>
+<fontSize>16</fontSize>
+<fontColor>#0000ff</fontColor>
+</textNode>
+<textNode nodeNum="74"><scenePos x="2291" y="2883"></scenePos>
+<text>From the 24-MS Results</text>
+<fontSize>10</fontSize>
+<fontColor>#008000</fontColor>
+</textNode>
+<textNode nodeNum="75"><scenePos x="1964" y="2599"></scenePos>
+<text>Climate change hydrology
+w/demand scenario A</text>
+<fontSize>10</fontSize>
+<fontColor>#008000</fontColor>
+</textNode>
+<textNode nodeNum="76"><scenePos x="2552" y="2155"></scenePos>
+<text>Interim
+Guidelines
+Extended</text>
+<fontSize>10</fontSize>
+<fontColor>#008000</fontColor>
+</textNode>
+<textNode nodeNum="77"><scenePos x="2186" y="2461"></scenePos>
+<text>Supply</text>
+<fontSize>16</fontSize>
+<fontColor>#0000ff</fontColor>
+</textNode>
+<textNode nodeNum="78"><scenePos x="2490" y="2118"></scenePos>
+<text>Policy</text>
+<fontSize>16</fontSize>
+<fontColor>#0000ff</fontColor>
+</textNode>
+<textNode nodeNum="79"><scenePos x="2602" y="2217"></scenePos>
+<text>Revert to 2007 
+FEIS No-action 
+Alternative</text>
+<fontSize>10</fontSize>
+<fontColor>#008000</fontColor>
+</textNode>
+<textNode nodeNum="80"><scenePos x="2166" y="2172"></scenePos>
+<text>Demand</text>
+<fontSize>16</fontSize>
+<fontColor>#0000ff</fontColor>
+</textNode>
+<textNode nodeNum="81"><scenePos x="2165" y="2498"></scenePos>
+<text>Observed Resampled</text>
+<fontSize>10</fontSize>
+<fontColor>#008000</fontColor>
+</textNode>
+<nodeLink from="1" to="2"></nodeLink>
+<nodeLink from="2" to="11"></nodeLink>
+<nodeLink from="3" to="46"><file type="RW DMI Configuration"><uuid>{1ebd4bf8-f38b-4ddb-a96f-5aa881893958}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="4" to="46"><file type="RW DMI Configuration"><uuid>{c9610a0f-aa7d-4e1b-9513-45c8269de957}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="5" to="46"><file type="RW DMI Configuration"><uuid>{665744f3-562a-401d-8382-a7c8aa14ca62}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="7" to="46"><file type="RW DMI Configuration"><uuid>{324faadf-4fd4-4e2d-8ff6-d960ffa8ae46}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="8" to="46"><file type="RW DMI Configuration"><uuid>{c2164558-a869-4f3c-a492-842165e934cc}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="9" to="46"><file type="RW DMI Configuration"><uuid>{410318bd-b625-47af-9c96-e94066afe5e5}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="10" to="46"><file type="RW DMI Configuration"><uuid>{cd8c7e1f-ee16-4f7b-9eba-891b70e917e7}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="12" to="46"><file type="RW DMI Configuration"><uuid>{e9ac6b6e-cdfc-4fe9-9df4-db33ee2796e7}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="13" to="46"><file type="RW DMI Configuration"><uuid>{380cec69-5f5c-4201-8f38-5314fb9191c5}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="14" to="46"><file type="RW DMI Configuration"><uuid>{ba768f7a-2f16-42ac-88d1-1be2e3a306b6}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="15" to="46"><file type="RW DMI Configuration"><uuid>{7d74335d-6379-4dab-93ee-afd1c3c22e5b}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="16" to="46"><file type="RW DMI Configuration"><uuid>{d9fee7b6-75de-403d-be9f-1cb3547e196b}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="17" to="46"><file type="RW DMI Configuration"><uuid>{31277479-b7f3-4e8d-9e61-bbf6a826eb7f}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="18" to="46"><file type="RW DMI Configuration"><uuid>{f7ce633a-f8e6-4643-a8f1-a15b24bcbef3}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="19" to="46"><file type="RW DMI Configuration"><uuid>{276cae1f-d87f-47f8-9ad9-f6b3406ca7ae}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="20" to="46"><file type="RW DMI Configuration"><uuid>{dc540946-0055-4e00-bcf1-2ab19fdfdfe2}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="21" to="46"><file type="RW DMI Configuration"><uuid>{653ac11f-6930-400d-843b-6743e2aaead7}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="22" to="46"><file type="RW DMI Configuration"><uuid>{74b696dc-551a-4079-a79a-6449f0186b48}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="23" to="46"><file type="RW DMI Configuration"><uuid>{c2d4f376-04cb-4fd7-a5d6-b1d83414232a}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="24" to="46"><file type="RW DMI Configuration"><uuid>{203552d3-f366-4f98-94f2-16b7c1d2f88d}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="25" to="46"><file type="RW DMI Configuration"><uuid>{4b16a1cf-e153-43e5-968b-5509b8080c6e}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="26" to="46"><file type="RW DMI Configuration"><uuid>{e135a903-1f58-4930-971a-fed0943bb5bd}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="27" to="46"><file type="RW DMI Configuration"><uuid>{83e57a71-b8c4-4ca3-a057-7a8414d81fb2}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="28" to="46"><file type="RW DMI Configuration"><uuid>{0d5afbbd-6789-4ede-9813-7072809bc073}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="29" to="46"><file type="RW DMI Configuration"><uuid>{959619ff-a267-44c7-87bc-9b691af48662}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="30" to="46"><file type="RW DMI Configuration"><uuid>{2c74b370-4f4e-40f1-97f2-864de370a0a7}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="31" to="46"><file type="RW DMI Configuration"><uuid>{cd4095c0-7fd9-4e17-ae86-fea1ec114ccf}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="32" to="46"><file type="RW DMI Configuration"><uuid>{ff977896-0c5d-4d51-9ada-83cfb5c54955}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="33" to="46"><file type="RW DMI Configuration"><uuid>{62ca426f-5dd1-429e-b30a-fe31e08b7679}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="34" to="46"><file type="RW DMI Configuration"><uuid>{301febd1-589f-434b-b74f-22a5748d9493}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="35" to="46"><file type="RW DMI Configuration"><uuid>{a74c6e00-03ea-4661-880f-b99f837ca902}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="36" to="46"><file type="RW DMI Configuration"><uuid>{9d600874-0e24-4e91-8d1e-f73c2290647f}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="37" to="46"><file type="RW DMI Configuration"><uuid>{04968292-c896-47b5-aaf6-a3138cf22e3e}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="39" to="46"><file type="RW Model Configuration"><uuid>{7954359b-96be-42f8-9b3a-04b7ab26c3af}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="40" to="46"><file type="RW DMI Configuration"><uuid>{79790adb-2d64-458f-a1d6-83866b3420e7}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="41" to="60"></nodeLink>
+<nodeLink from="42" to="61"></nodeLink>
+<nodeLink from="43" to="46"><file type="RW DMI Configuration"><uuid>{3685972d-580b-4246-829c-5030286a60d4}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="45" to="46"><file type="RW MRM Configuration"><uuid>{358f1a02-bac9-4989-8707-8ae16f7d2738}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="46" to="42"></nodeLink>
+<nodeLink from="46" to="41"></nodeLink>
+<nodeLink from="46" to="53"></nodeLink>
+<nodeLink from="46" to="55"></nodeLink>
+<nodeLink from="46" to="54"></nodeLink>
+<nodeLink from="46" to="1"></nodeLink>
+<nodeLink from="47" to="46"><file type="RW Policy Configuration"><uuid>{eef7da1e-20b5-4950-bbae-2c5f3e80c2bb}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="50" to="59"></nodeLink>
+<nodeLink from="52" to="57"></nodeLink>
+<nodeLink from="53" to="50"></nodeLink>
+<nodeLink from="54" to="58"></nodeLink>
+<nodeLink from="55" to="52"></nodeLink>
+<nodeLink from="56" to="62"></nodeLink>
+<nodeLink from="58" to="51"></nodeLink>
+<nodeLink from="60" to="64"></nodeLink>
+<nodeLink from="61" to="63"></nodeLink>
+<nodeLink from="62" to="66"></nodeLink>
+<nodeLink from="65" to="46"><file type="RW DMI Configuration"><uuid>{e98bf101-a0b7-45c1-9e69-825c24cb0fc8}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="67" to="46"><file type="RW DMI Configuration"><uuid>{3ab6588f-0967-4498-bccb-e2f7fa42c3e4}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="68" to="46"><file type="RW DMI Configuration"><uuid>{d040fcba-635c-41b2-a9d4-156d7c28c2a4}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="69" to="46"><file type="RW DMI Configuration"><uuid>{286a7f9b-79af-41ee-8d94-c4d0f6c22463}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+<nodeLink from="70" to="46"><file type="RW DMI Configuration"><uuid>{6ca5c47c-8912-4fbb-a5db-b67514c7bcc0}</uuid>
+<fileName>_StudyEventOutput_.xml</fileName>
+</file>
+</nodeLink>
+</graph>
+<eventPlaceMod></eventPlaceMod>
+<eventIntMod></eventIntMod>
+<eventExtMod></eventExtMod>
+<scenarioMgr><scenarioList><nameList sepChar=","><type>Model</type>
+<type>MRM Config</type>
+<type>Demand</type>
+<type>Policy</type>
+<type>IC</type>
+</nameList>
+<inactiveList></inactiveList>
+<view>ascending</view>
+<customView><typeList></typeList>
+<sortKeyList></sortKeyList>
+</customView>
+<generateView><typeList><type>Model</type>
+<type>MRM Config</type>
+<type>Demand</type>
+<type>Policy</type>
+<type>IC</type>
+</typeList>
+</generateView>
+<simulateView><typeList><type>Model</type>
+<type>MRM Config</type>
+<type>Demand</type>
+<type>Policy</type>
+<type>IC</type>
+</typeList>
+<hiddenList><uuid>{9837bafd-7970-45c6-91f4-e42badaf66b7}</uuid>
+<uuid>{7434e41b-8ce4-4ba9-a8bd-d53bf3dd0be0}</uuid>
+<uuid>{bcb78f9a-138d-4e78-905a-c6afd13010d5}</uuid>
+<uuid>{6b2f849f-1f72-4019-b641-0ac33fee0eb8}</uuid>
+<uuid>{7dbc5a3b-4e0e-4fb7-b739-ac01c0ad35d1}</uuid>
+<uuid>{baf6ce3f-ba76-429f-b395-c5dc66c6a3d0}</uuid>
+<uuid>{72e82134-4906-4719-aad8-b91f819b2111}</uuid>
+<uuid>{713cac7e-39cd-4693-811d-1b90b43e3f89}</uuid>
+<uuid>{d74fdc6a-2a55-4151-8f52-9490365abc55}</uuid>
+<uuid>{ade1b3ca-6fff-48d2-862e-07f938f63f38}</uuid>
+<uuid>{3bb32fc8-34b5-4b76-83d2-a5d50f31a3d3}</uuid>
+<uuid>{9ac40eda-e9a4-42b4-9fea-3da6bc78d464}</uuid>
+<uuid>{7f598376-a2b2-4540-9112-f0e6400f30f5}</uuid>
+<uuid>{17dc3140-cf71-4867-b787-aac88bb1acb4}</uuid>
+<uuid>{48c46ef4-4c41-4c21-a8c0-6fa1fee387ae}</uuid>
+<uuid>{bec90118-2b7f-4f0e-b249-c52f9c587402}</uuid>
+<uuid>{0f8b74f4-b2c6-4adc-9314-052310c9f0af}</uuid>
+<uuid>{a1c9569a-a8cd-44f2-96fb-826e2f9d40b2}</uuid>
+<uuid>{c797e8e2-75cc-4a5e-8323-c59f663fb9e3}</uuid>
+<uuid>{9b424298-5f6e-42c0-abff-a48cf9d16752}</uuid>
+<uuid>{f10d0c91-d5b6-46c2-9c2f-e356091dc63b}</uuid>
+<uuid>{41f0f629-f616-449f-9b28-fa08df83ba3d}</uuid>
+<uuid>{1d998fe0-9a6f-498d-a1d6-a02e1c39edff}</uuid>
+<uuid>{a7bba8fc-1433-481b-9719-2c9b6814a482}</uuid>
+<uuid>{82661c9f-17a4-4f74-8c25-b40ee940824f}</uuid>
+<uuid>{216a8404-383d-41f1-a610-105f56ee9355}</uuid>
+<uuid>{0a3ab280-9eee-4d03-98b2-909d966db0b8}</uuid>
+<uuid>{be5b994c-9012-45a0-a561-2af2c0a2f49d}</uuid>
+<uuid>{2cda11ef-0099-43e5-95f8-0d55375a1d40}</uuid>
+<uuid>{0933d99d-62b5-4ede-a701-e7dcc2de0b73}</uuid>
+<uuid>{1f22769e-6d38-48fb-8fc5-6f5d8b5c171f}</uuid>
+<uuid>{f082abc1-119f-4cb4-abb7-157b940e9024}</uuid>
+<uuid>{693fc9ab-9d79-4fc7-b555-7c37d9b7c8db}</uuid>
+<uuid>{6e059203-e2ea-436e-924d-05f61f6db083}</uuid>
+<uuid>{885dd4b4-8018-48f7-9984-27a1d5934e0e}</uuid>
+<uuid>{af672f38-1abb-4b2f-b2b1-dc6e412493e0}</uuid>
+<uuid>{07045e58-3528-48b2-be54-88fd4e9fce36}</uuid>
+<uuid>{6ed5a2ab-fdbc-4a75-8273-4634d26762dd}</uuid>
+<uuid>{64b6432a-635e-464a-9bbd-ca5e381d80b7}</uuid>
+<uuid>{7ca2e004-7000-4042-bdfa-bd942dcd65be}</uuid>
+<uuid>{a4efe8c1-70dd-4475-a436-c4415dbbb3ae}</uuid>
+<uuid>{6751b3b6-9790-44ac-ab79-347941ad18bf}</uuid>
+<uuid>{d2a723c0-0316-42d9-99dc-c4223da54958}</uuid>
+<uuid>{a5e0b315-3df4-480c-9058-ac6411f41d22}</uuid>
+<uuid>{be21b86e-3dd5-43c0-a808-f34733aedbd5}</uuid>
+<uuid>{bcb409dc-26d7-4604-96e9-55872f74c99c}</uuid>
+<uuid>{5579f6c6-4be2-458a-a8e2-cc786a62d883}</uuid>
+<uuid>{0c454049-e7f3-49e4-b0d8-1a6c77a2e6a4}</uuid>
+<uuid>{4d00242b-eabf-43c8-8faa-975c664fdb83}</uuid>
+<uuid>{962a10ed-af3e-4219-8b3c-9fbbf5849a3b}</uuid>
+<uuid>{92cbaf99-0fa7-4ec5-b929-33f70fcf09ae}</uuid>
+<uuid>{66abcf96-7b7e-40af-9c10-6ed05b433c54}</uuid>
+<uuid>{630e6fbe-04c1-4705-af41-79e4275cbb1c}</uuid>
+<uuid>{59639ea2-1929-4101-871b-14c1609681d3}</uuid>
+<uuid>{c73bde7b-6306-43b1-8994-4a52c032c1a0}</uuid>
+<uuid>{cf5b97e8-7fe7-4f48-a8e8-dfcd4e47a2ae}</uuid>
+<uuid>{1654f64c-3748-42f4-8873-78c01f27261b}</uuid>
+<uuid>{0914ebb7-d4b0-40f8-a50f-bc2c95018810}</uuid>
+<uuid>{037ad90b-091d-4978-9691-7f26872ff251}</uuid>
+<uuid>{6c3dea7a-5457-432e-9ce1-219504740657}</uuid>
+<uuid>{1a0d5400-ce28-452b-89fb-6d022cc594ca}</uuid>
+<uuid>{5b1e9493-0ff0-4f4a-bf94-940280763b95}</uuid>
+<uuid>{1561533f-379d-4fdc-afde-350ad2470b11}</uuid>
+<uuid>{4654ab6b-4742-4450-bb5c-c67d693b4925}</uuid>
+<uuid>{7248ec30-fd0d-4c03-91e3-0ddfe1b32672}</uuid>
+<uuid>{087566b7-6978-4f47-992b-e6f9d71374ab}</uuid>
+<uuid>{9bb231c8-d067-4809-8ca4-74724c90ff91}</uuid>
+<uuid>{d85fe406-731e-432c-b67f-961764aa9a2c}</uuid>
+<uuid>{011a5154-f2b1-4b72-ab9f-8e2e5a0e03fd}</uuid>
+<uuid>{ed29e924-3a7c-40d5-992e-25c6f43f8259}</uuid>
+<uuid>{cdcfdfdf-453f-4099-83bd-152a9d29edea}</uuid>
+<uuid>{2a914307-b70b-4d69-9850-3527cd5efa7b}</uuid>
+<uuid>{f7ef1cd6-135b-4b14-9ffe-86ff2eb6d7e3}</uuid>
+<uuid>{bad47235-c926-41f2-bc76-f10dc0164ec6}</uuid>
+<uuid>{a438800c-c8f9-41e7-93e2-02b429705e14}</uuid>
+<uuid>{797965b6-1392-4f0a-80ff-dd5d78a24d07}</uuid>
+<uuid>{d30752fe-b3e7-4a03-9e53-c01b0938dee1}</uuid>
+<uuid>{50db4d63-ea91-417f-8b21-0efac3415ab2}</uuid>
+<uuid>{cc284b86-77ca-4e04-9be1-d9e55d37080d}</uuid>
+<uuid>{3123b067-63fc-4474-8bbd-ba889b0841da}</uuid>
+<uuid>{5ad06e26-9a8b-444e-9d70-5e32b99d92c6}</uuid>
+<uuid>{7cab0602-08ca-4ec6-bf64-ae0ad7f547be}</uuid>
+<uuid>{2119f31e-237a-4dd6-b81a-cb1f7171e7bd}</uuid>
+<uuid>{bc9a753d-c480-4185-8017-bd5f639e8611}</uuid>
+<uuid>{8d08eca5-6ee7-4c0a-bd71-c8309efd445f}</uuid>
+<uuid>{3b3ec3ee-07ae-4200-be33-4a0decfc638c}</uuid>
+<uuid>{c96bf916-5545-407a-a436-d49614e5d9c6}</uuid>
+<uuid>{a91270c1-0cc8-4929-9211-8b620695787b}</uuid>
+<uuid>{484d9359-3a06-493c-ad51-e6a5bcee0d42}</uuid>
+<uuid>{83419e86-3e8c-4bfd-a3fc-c69086480dc9}</uuid>
+<uuid>{c034fc7f-b7ef-4e89-8835-dc83d50e2973}</uuid>
+<uuid>{6f588001-d9ef-42bd-a2ef-afa065d1031d}</uuid>
+<uuid>{f8ff8eeb-2016-4354-9ebf-5938463f8270}</uuid>
+<uuid>{c4a55db3-a919-41e0-91f8-1789ba5c0f22}</uuid>
+<uuid>{ebca1909-cffe-4ee3-a269-f3821be37547}</uuid>
+<uuid>{0b8e494a-faa8-4333-9309-e08f58355a4d}</uuid>
+<uuid>{a67aafa8-f243-40a4-87f8-eaba4dc75be2}</uuid>
+<uuid>{811a6f4b-a6ec-4fad-85ce-76a26598f95c}</uuid>
+<uuid>{6ebf0f0f-51cf-4310-a1f1-98700442d9a1}</uuid>
+<uuid>{480fb9fb-81c6-4582-b51c-6fb97cb16b2b}</uuid>
+<uuid>{5aa1bd56-650c-4bef-9fb0-fece84c09773}</uuid>
+<uuid>{82b50403-60b5-4b38-8ddb-39bb975d7f6a}</uuid>
+<uuid>{11e1ab85-49ac-411b-b7fb-37c92a9a17d4}</uuid>
+<uuid>{1467f03c-0df8-4099-a03b-9a6751602a17}</uuid>
+<uuid>{afb42153-397a-4700-b466-0daa036a9f42}</uuid>
+<uuid>{e36d07ef-4aeb-4dd8-938d-694ae2f7195f}</uuid>
+<uuid>{5fd92184-b5ee-4878-8770-1b06286de630}</uuid>
+<uuid>{acaefde7-700d-494b-8c43-d83735870288}</uuid>
+<uuid>{b199be2b-1525-48ee-ab6d-9a3f93afff01}</uuid>
+<uuid>{ccb79eee-fdc5-4f23-8cab-b5ef0f2cb5b6}</uuid>
+<uuid>{6d4ef9fc-11a2-4848-ac83-778818c8e612}</uuid>
+<uuid>{35387025-3c76-4960-aa7c-c144d3c89490}</uuid>
+<uuid>{e3408196-fbc7-46b2-b437-e8d667c8233b}</uuid>
+<uuid>{6df233bc-8f47-49fb-aae5-68e52ee0be48}</uuid>
+</hiddenList>
+</simulateView>
+<postProcView><typeList><type>Model</type>
+<type>MRM Config</type>
+<type>Demand</type>
+<type>Policy</type>
+<type>IC</type>
+</typeList>
+<hiddenList><uuid>{9837bafd-7970-45c6-91f4-e42badaf66b7}</uuid>
+<uuid>{7434e41b-8ce4-4ba9-a8bd-d53bf3dd0be0}</uuid>
+<uuid>{bcb78f9a-138d-4e78-905a-c6afd13010d5}</uuid>
+<uuid>{6b2f849f-1f72-4019-b641-0ac33fee0eb8}</uuid>
+</hiddenList>
+</postProcView>
+<scenario><uuid>{3212cdc1-b2bd-416e-912c-90c1d5b0fa31}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1981</name>
+<config>
+<input type="IC" uuid="{ee614daa-8263-455f-8fef-a817f7732c2c}" name="1981" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace4</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace4</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{831426c8-30ac-4d0a-ae15-e3843c6d9d7f}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1982</name>
+<config>
+<input type="IC" uuid="{56995749-4c52-4b7f-aac0-9e5a010b57ec}" name="1982" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace5</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace5</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{17b9e89e-ea56-4bea-a9f9-c99fd9fcacbc}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1983</name>
+<config>
+<input type="IC" uuid="{e26ed6ba-2b94-46b4-a07a-35dc58b8b236}" name="1983" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace6</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace6</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{ffc299b6-9429-49e4-a49b-0acc6fa4deef}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1984</name>
+<config>
+<input type="IC" uuid="{15a021b9-7214-4d50-8d36-80c12239569a}" name="1984" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace7</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace7</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{339ad39f-0bfd-4591-b995-650755418fdd}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1985</name>
+<config>
+<input type="IC" uuid="{40b78670-f138-4a8e-8426-16bc499477f1}" name="1985" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace8</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace8</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{1eb10b53-5b58-4704-95b0-5145bd69cfbf}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1986</name>
+<config>
+<input type="IC" uuid="{0f3b385b-7354-47f0-9489-7469f3f9007b}" name="1986" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace9</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace9</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{95cb4544-835e-468a-8d21-7b2a26483ccb}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1987</name>
+<config>
+<input type="IC" uuid="{f6b6af53-92b9-4fd4-9ad2-a9e7152d48d2}" name="1987" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace10</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace10</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{1738c964-a2dc-4d80-8e6b-4b94c45b26e7}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1988</name>
+<config>
+<input type="IC" uuid="{bfdf0321-f3ad-4a11-b556-17226189a613}" name="1988" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace11</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace11</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{81b0c77e-3a54-4b70-9a39-8b572cae6848}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1989</name>
+<config>
+<input type="IC" uuid="{048542b9-72f2-41a2-a74b-1adcf55ebf0b}" name="1989" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace12</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace12</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{01f515c9-0e0c-4afd-8ca5-9d5659a3ca17}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1990</name>
+<config>
+<input type="IC" uuid="{6deffa8f-f236-4ee8-9cae-15725f6be70a}" name="1990" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace13</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace13</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{674392ed-644c-45a6-aa21-e299310ce560}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1991</name>
+<config>
+<input type="IC" uuid="{e4e8c98c-6135-4cbc-92ba-d065740a73e1}" name="1991" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace14</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace14</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{6855bb6d-9dd7-447e-8b5c-4d3abb489af4}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1992</name>
+<config>
+<input type="IC" uuid="{2424290c-e40b-432c-b03c-2ff3f1eb9c55}" name="1992" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace15</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace15</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{b2f83416-bd18-4e26-94a7-783d9d73e0eb}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1993</name>
+<config>
+<input type="IC" uuid="{6aad162d-9ca7-45fb-ab07-b8cb353723f6}" name="1993" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace16</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace16</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{6b71ad89-513c-4b90-9fc1-5ce28d175113}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1994</name>
+<config>
+<input type="IC" uuid="{f6f70f9c-e440-4d51-85f0-807bab0abc80}" name="1994" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace17</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace17</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{90f69931-1f15-4f85-b72a-14edb31cc1e3}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1995</name>
+<config>
+<input type="IC" uuid="{249f94cf-5bac-4f81-b2f1-6b68d5f9fb87}" name="1995" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace18</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace18</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{99852ed5-91ab-47c3-9b4d-6496c1dcda7d}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1996</name>
+<config>
+<input type="IC" uuid="{ed984ea7-dbfe-4505-aefe-48c3e9017a73}" name="1996" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace19</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace19</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{c99e0c6c-990b-4a94-ae42-04a47a964bbc}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1997</name>
+<config>
+<input type="IC" uuid="{76e5ac39-005e-4a63-ad3a-dd1c1605b8b6}" name="1997" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace20</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace20</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{38d28d0e-2d90-4ed7-961d-39981f77149c}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1998</name>
+<config>
+<input type="IC" uuid="{880a8688-dc63-4251-8a61-8eff62ea9cf7}" name="1998" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace21</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace21</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{8e9115d2-431f-46c5-ad73-7e9145b31a2d}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,1999</name>
+<config>
+<input type="IC" uuid="{a08ef79e-13f8-4ef7-bb16-29374019d4b9}" name="1999" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace22</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace22</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{bb4d62ef-523d-44fa-8fda-de953debaf31}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2000</name>
+<config>
+<input type="IC" uuid="{02471d8d-be79-4ec2-8494-0dd26605b64b}" name="2000" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace23</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace23</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{ac00d749-f986-4e94-bfb9-930963664346}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2001</name>
+<config>
+<input type="IC" uuid="{636a0aad-6b27-460b-8162-1a87c8a47fd2}" name="2001" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace24</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace24</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{1135d368-9258-4fa9-9c1b-92dbdbbdb50a}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2002</name>
+<config>
+<input type="IC" uuid="{29e123c7-3e8a-4499-ae1f-3d49ff0b59bb}" name="2002" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace25</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace25</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{ef08d33e-7240-4bcb-8376-79a51eb21ce8}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2003</name>
+<config>
+<input type="IC" uuid="{01654516-0c75-4f0a-a024-43efc74908ec}" name="2003" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace26</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace26</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{4de00dfc-a4a8-4f25-81f4-387e0163ab86}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2004</name>
+<config>
+<input type="IC" uuid="{90d4b99d-eb27-4583-b01f-8ae45eddfff0}" name="2004" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace27</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace27</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{6eb9a25a-fe01-4d71-b539-796d579b3214}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2005</name>
+<config>
+<input type="IC" uuid="{6726301f-61e8-4462-a744-17679a5ff92a}" name="2005" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace28</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace28</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{915b3b9d-d747-4709-8753-1845dfcd0e11}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2006</name>
+<config>
+<input type="IC" uuid="{1a8f21d6-2760-4405-9ac1-2e91dde56e04}" name="2006" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace29</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace29</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{c0f69117-948a-44b9-88a3-315a43d98228}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2007</name>
+<config>
+<input type="IC" uuid="{8495de2e-682a-4e03-b60a-15d5ee4ba635}" name="2007" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace30</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace30</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{fddbe0b1-4127-4414-87ea-6547d6f20169}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2008</name>
+<config>
+<input type="IC" uuid="{55bf3c2b-6213-4018-a952-a8cae088500f}" name="2008" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace31</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace31</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{f2f19489-eed6-4597-b526-47a6168f7887}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2009</name>
+<config>
+<input type="IC" uuid="{ad0442c7-0204-4f9e-bab4-aa526c9f49aa}" name="2009" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace32</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace32</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{3320c5b4-596e-4859-b193-f5aaad48a7b1}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2010</name>
+<config>
+<input type="IC" uuid="{c3a41621-a45e-4892-aee8-f7f90520bba5}" name="2010" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace33</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace33</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{c7195fa5-a7a7-4b8e-bd20-9d4c48c54a26}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2011</name>
+<config>
+<input type="IC" uuid="{4e874a1c-07b4-45c6-aa59-9521e6358fb9}" name="2011" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace34</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace34</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{4a939ce0-812a-4f30-a80a-7964b95f228e}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2012</name>
+<config>
+<input type="IC" uuid="{0b8553bf-377f-4230-ad94-4ea116356b34}" name="2012" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace35</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace35</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{7f547ddd-539a-4485-86e1-fc4e7c0d900a}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2013</name>
+<config>
+<input type="IC" uuid="{2a682a81-f6a0-4ba2-85ad-7d5ee49c5f63}" name="2013" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace36</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace36</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{3ca45fb5-b6c5-4313-b1e4-7a48834da411}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2014</name>
+<config>
+<input type="IC" uuid="{01aad661-48b9-4a79-9e7e-fd5a938820a2}" name="2014" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace37</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace37</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{0c2d39c4-e79f-4fc0-b218-3ad76aa26b88}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,2015</name>
+<config>
+<input type="IC" uuid="{313646d1-9c0b-4f16-b235-2cc9c4c5242b}" name="2015" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace38</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace38</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{3295d6ee-20ac-4818-b2d7-c759de0ae41b}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,MTOM_Max</name>
+<config>
+<input type="IC" uuid="{dc072eb9-61a6-4d38-9ee6-930dc86ff821}" name="MTOM_Max" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace2</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace2</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{2cfbadef-4b40-4acc-9030-899242d63021}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,MTOM_Min</name>
+<config>
+<input type="IC" uuid="{89335aad-5114-481f-9ec3-ad7d0a59effc}" name="MTOM_Min" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace1</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace1</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{ea4370b7-2300-4d1f-a83a-92cd71db4b5d}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,MTOM_Most</name>
+<config>
+<input type="IC" uuid="{44ecc40f-e2db-4acc-9835-8da40cd5f4e6}" name="MTOM_Most" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Trace3</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Trace3</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>notRun</state>
+</simState>
+<postProcState></postProcState>
+</scenario>
+<scenario><uuid>{7254b5aa-fe3d-4d90-8bbc-bcfaf1073be2}</uuid>
+<name>Apr2017_2018,DNF,2007Dems,IG,Most</name>
+<config>
+<input type="IC" uuid="{31f2dc6a-df14-4805-be26-8ef7bf0b0c7e}" name="Most" metaType="DMI">
+<dmiName>Import Initial Conditions From MTOM</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="MTOM2CRSS_Annual">
+<sheet>Most</sheet>
+</dataset>
+<dataset type="Excel" name="MTOM2CRSS_Monthly">
+<sheet>Most</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="Model" uuid="{037fc4fc-1cd0-4380-9299-821eb8dfc2d2}" name="Apr2017_2018">
+<modelPath>$CRSS_DIR/model/CRSS.V2.5.2018.Apr2017.mdl</modelPath>
+</input>
+<input type="Demand" uuid="{59f2e25b-1215-4b9d-950f-9bc428a7c333}" name="2007Dems" metaType="DMI">
+<dmiName>2007 UB and LB Demands</dmiName>
+<execTime>preRun</execTime>
+<dmiType>directConnect</dmiType>
+<datasetList>
+<dataset type="Excel" name="2007 UCRC Demand Schedule">
+<sheet>Baseline Monthly Data</sheet>
+</dataset>
+</datasetList>
+</input>
+<input type="MRM Config" uuid="{7f7fd6c1-f640-4208-80be-56ddcd218985}" name="DNF">
+<configName>DNF with Salinity</configName>
+</input>
+<input type="Policy" uuid="{cea02930-19f8-4040-bb24-bada62153f93}" name="IG">
+<rulesetPath>$CRSS_DIR\ruleset\CRSS.Baseline.2027IG.v2.4.rls</rulesetPath>
+</input>
+</config>
+<simState><state>runOk</state>
+<dateTime>Thu Apr 20 11:48:51 2017</dateTime>
+<activityList><activity name="Simulate Scenario"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:28:04 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__RwProcess_CJerla.log</logFile>
+<sortKey>0</sortKey>
+</activity>
+<activity name="Execute RiverWare"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:28:04 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/RwBatch.log</logFile>
+<sortKey>0</sortKey>
+</activity>
+<activity name="Execute Distrib MRM Controller"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:28:27 2017</dateTime>
+<sortKey>0</sortKey>
+</activity>
+<activity name="Init Distrib MRM Controller"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:28:27 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__RemoteMgr_CJerla.log</logFile>
+<sortKey>0</sortKey>
+</activity>
+<activity name="Traces 1 - 10"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:47:10 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__000_CJerla.log</logFile>
+<sortKey>0</sortKey>
+</activity>
+<activity name="Traces 11 - 19"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:45:39 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__001_CJerla.log</logFile>
+<sortKey>1</sortKey>
+</activity>
+<activity name="Traces 20 - 28"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:45:56 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__002_CJerla.log</logFile>
+<sortKey>2</sortKey>
+</activity>
+<activity name="Traces 29 - 37"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:45:51 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__003_CJerla.log</logFile>
+<sortKey>3</sortKey>
+</activity>
+<activity name="Traces 38 - 46"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:45:50 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__004_CJerla.log</logFile>
+<sortKey>4</sortKey>
+</activity>
+<activity name="Traces 47 - 55"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:45:33 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__005_CJerla.log</logFile>
+<sortKey>5</sortKey>
+</activity>
+<activity name="Traces 56 - 64"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:45:41 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__006_CJerla.log</logFile>
+<sortKey>6</sortKey>
+</activity>
+<activity name="Traces 65 - 73"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:45:47 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__007_CJerla.log</logFile>
+<sortKey>7</sortKey>
+</activity>
+<activity name="Traces 74 - 82"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:45:40 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__008_CJerla.log</logFile>
+<sortKey>8</sortKey>
+</activity>
+<activity name="Traces 83 - 91"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:45:45 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__009_CJerla.log</logFile>
+<sortKey>9</sortKey>
+</activity>
+<activity name="Traces 92 - 100"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:45:42 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__010_CJerla.log</logFile>
+<sortKey>10</sortKey>
+</activity>
+<activity name="Traces 101 - 109"><state>perfOk</state>
+<dateTime>Thu Apr 20 11:45:31 2017</dateTime>
+<logFile>C:/model/crss.offc_dev/Working/CRSS/Apr2017_2018_DNF_2007Dems_IG_Most/rw__011_CJerla.log</logFile>
+<sortKey>11</sortKey>
+</activity>
+</activityList>
+</simState>
+<postProcState></postProcState>
+</scenario>
+</scenarioList>
+</scenarioMgr>
+<scenarioSetMgr><scenarioSet uniqueId="{21e4b525-8079-41f9-b5c1-6b7df4bd52ee}" name="HydrologyCompare"></scenarioSet>
+<scenarioSet uniqueId="{c8b77ffd-94c2-4948-9cf8-b7ef2bec3fd6}" name="NatFlowCompare"></scenarioSet>
+</scenarioSetMgr>
+</Study>
